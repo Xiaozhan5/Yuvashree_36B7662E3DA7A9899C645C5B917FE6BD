@@ -1,0 +1,60 @@
+﻿
+Unit-3: Chellenge 3.1
+
+import re
+ 
+# Sample input
+
+arr = [10, 20, 80, 30, 60, 50, 110, 100, 130, 170]
+
+x = 110
+ 
+# Convert the array to a string
+
+arr_str = ','.join(str(i) for i in arr)
+ 
+# Use regular expression to search for the element in the string
+
+match = re.search(r'\b{}\b'.format(x), arr_str)
+ 
+# Output
+
+if match:
+
+    # Calculate the index by counting the number of commas before the match
+
+    result = arr_str[:match.start()].count(',')
+
+    print(f"Element {x} is present at index {result}")
+
+else:
+
+    print(f"Element {x} is not present in the array")
+
+
+Output:
+Element 110 is present at index 6
+__________________________________________
+
+
+Unit-3: Chellenge 3.2
+
+public class CGPAProgram  
+{     
+public static void main (String args[])  
+    {     
+    double English, Hindi, Maths, Science, SocialStudy, CGPA, CGPAper ;  
+    English = 9.1;  
+    Hindi = 8.5;  
+    Maths = 9.5;  
+    Science =9.6;  
+    SocialStudy = 8.6;  
+    CGPA = (9.1+8.5+9.5+9.6+8.6)/(5.0);  
+    CGPAper = (float)(9.5 * (CGPA));  
+    System.out.println(" CGPA Percentage is:  "+CGPAper);  
+    }  
+}  
+
+Output:
+CGPA Percentage is:  86.06
+
